@@ -30,9 +30,11 @@
         console.log("That is too high!");
       } else if (q4 < 24) {
         console.log("That is too low!");
-      } else if (q4 = 24) {
+      } else if (q4 == 24) {
         score++;
         console.log("That is correct!");
+      } else if (typeof q4 === "string") {
+        console.log("That is not a number!")
       }
 //print score
       console.log("You answered " + score + " questions correctly!")
