@@ -36,5 +36,11 @@
       } else if (typeof q4 === "string") {
         console.log("That is not a number!")
       }
+//question five
+      do{
+        var q5 = prompt ("What number am I thinking of?")
+      }
+      while(q5 <> 23)
+
 //print score
       console.log("You answered " + score + " questions correctly!")
