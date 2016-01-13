@@ -26,11 +26,11 @@
       }
 //question four
       var q4 = prompt ("How old am I?");
-      if(q4 > 24){
+      if(parseInt(q4) > 24){
         alert("That is too high!");
-      } else if (q4 < 24) {
+      } else if (parseInt(q4) < 24) {
         alert("That is too low!");
-      } else if (q4 == 24) {
+      } else if (parseInt(q4) = 24) {
         score++;
         alert("That is correct!");
       } else if (typeof q4 === "string") {
