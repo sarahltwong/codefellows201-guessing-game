@@ -18,8 +18,6 @@ var answers = [
   ["raindrops", "roses", "kittens", "chocolate", "flowers", "puppies"]
 ];
 
-var answersSubmitted = [];
-
 var statusLog = document.getElementById("printStatus");
 statusLog.textContent = "First question...";
 
