@@ -10,5 +10,5 @@ The user guesses 4 questions and then gets their overall score at the end.
 **Contact info:** [Github](https://github.com/sarahltwong) :space_invader:
 
 **Partner:** Daniel Li
-
-**Contact info:** [Github](https://github.com/danielxli/codefellows201-guessing-game)
+**Partner's repository:** [Github](https://github.com/danielxli/guessing-game)
+**Pair work:** [Github](https://github.com/danielxli/codefellows201-guessing-game)

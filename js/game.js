@@ -1,3 +1,5 @@
+document.getElementById("statusImage").innerHTML = ""
+
 var startGame = document.getElementById("startMessage");
 
 var score = 0;
@@ -18,17 +20,26 @@ var answers = [
   ["raindrops", "roses", "kittens", "chocolate", "flowers", "puppies"]
 ];
 
+var responses = [];
+
+var currentQuestion = document.getElementById("printQuestion");
+currentQuestion.textContent = "First question...";
+
 var statusLog = document.getElementById("printStatus");
-statusLog.textContent = "First question...";
+statusLog.textContent = "correct?";
 
 function game(question,answer) {
-  var askedQuestion = prompt(question).toLowerCase();
+  currentQuestion.textContent = questions [i];
+  var answerSubmitted = prompt(question).toLowerCase();
+  responses.push(answerSubmitted);
   for (var j = 0; j < answer.length; j++){
-    if (answer[j] === askedQuestion){
+    if (answer[j] === answerSubmitted){
+      statusImage.src = "img/HappyOtter.jpg";
       score++;
       statusLog.textContent = "That is correct! Your score is " + score + ".";
       j = answer.length;
     } else if (j === answer.length - 1){
+      statusImage.src = "img/SadOtter.jpg";
       statusLog.textContent = "That is incorrect! Your score is still " + score + ".";;
     }
   }

@@ -17,3 +17,8 @@ p {
     font-weight: 500;
     letter-spacing: 0.1em;
 }
+
+.otterImage {
+  height: 250px;
+  width: auto;
+}
