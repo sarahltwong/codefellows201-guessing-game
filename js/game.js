@@ -1,6 +1,7 @@
-document.getElementById("statusImage").innerHTML = ""
+var statusLog = document.getElementById("printStatus");
+statusLog.textContent = "Let's play!";
 
-var startGame = document.getElementById("startMessage");
+document.getElementById("statusImage").innerHTML = "";
 
 var score = 0;
 var questions = [
@@ -21,29 +22,43 @@ var answers = [
 ];
 
 var responses = [];
+var correctWrong = [];
 
-var currentQuestion = document.getElementById("printQuestion");
-currentQuestion.textContent = "First question...";
-
-var statusLog = document.getElementById("printStatus");
-statusLog.textContent = "correct?";
+for (var i = 0; i < questions.length; i++){
+  if (i === 0 ) {
+    document.write("Question "+ (i+1) + ": " + questions[i] + "<br>");
+    game(questions[i],answers[i]);
+  // } else if (i === 6) {
+  //   document.write("Possible answers: " + answers[i-1] + "<br>");
+  //   document.write("Your answer ''" + responses[i-1] + "'' was " + correctWrong[i-1] + "!" + "<br>" + "<br>");
+  } else {
+    document.write("Possible answers: " + answers[i-1] + "<br>");
+    document.write("Your answer ''" + responses[i-1] + "'' was " + correctWrong[i-1] + "!" + "<br>" + "<br>")
+    document.write("Question "+ (i+1) + ": " + questions[i] + "<br>");
+    game(questions[i],answers[i]);
+  }
+}
 
 function game(question,answer) {
-  currentQuestion.textContent = questions [i];
   var answerSubmitted = prompt(question).toLowerCase();
   responses.push(answerSubmitted);
-  for (var j = 0; j < answer.length; j++){
+    for (var j = 0; j < answer.length; j++){
     if (answer[j] === answerSubmitted){
       statusImage.src = "img/HappyOtter.jpg";
       score++;
+      correctWrong.push("correct");
       statusLog.textContent = "That is correct! Your score is " + score + ".";
       j = answer.length;
     } else if (j === answer.length - 1){
       statusImage.src = "img/SadOtter.jpg";
-      statusLog.textContent = "That is incorrect! Your score is still " + score + ".";;
+      correctWrong.push("incorrect");
+      statusLog.textContent = "That is incorrect! Your score is still " + score + ".";
     }
   }
 }
-for (var i = 0; i < questions.length; i++){
-  game(questions[i],answers[i]);
+
+if (correctWrong[5] === "correct" || correctWrong[5] === "incorrect" ) {
+  console.log("cheese");
+  document.write("Possible answers: " + answers[5] + "<br>");
+  document.write("Your answer ''" + responses[5] + "'' was " + correctWrong[5] + "!" + "<br>" + "<br>");
 }
