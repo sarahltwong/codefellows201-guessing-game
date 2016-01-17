@@ -28,9 +28,6 @@ for (var i = 0; i < questions.length; i++){
   if (i === 0 ) {
     document.write("Question "+ (i+1) + ": " + questions[i] + "<br>");
     game(questions[i],answers[i]);
-  // } else if (i === 6) {
-  //   document.write("Possible answers: " + answers[i-1] + "<br>");
-  //   document.write("Your answer ''" + responses[i-1] + "'' was " + correctWrong[i-1] + "!" + "<br>" + "<br>");
   } else {
     document.write("Possible answers: " + answers[i-1] + "<br>");
     document.write("Your answer ''" + responses[i-1] + "'' was " + correctWrong[i-1] + "!" + "<br>" + "<br>")
