@@ -46,11 +46,13 @@ function game(question,answer) {
       statusImage.src = "img/HappyOtter.jpg";
       score++;
       correctWrong.push("correct");
+      document.getElementById("printStatus").className="greenCorrect";
       statusLog.textContent = "That is correct! Your score is " + score + ".";
       j = answer.length;
     } else if (j === answer.length - 1){
       statusImage.src = "img/SadOtter.jpg";
       correctWrong.push("incorrect");
+      document.getElementById("printStatus").className="redWrong";
       statusLog.textContent = "That is incorrect! Your score is still " + score + ".";
     }
   }
