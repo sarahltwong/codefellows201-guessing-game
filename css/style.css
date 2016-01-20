@@ -6,30 +6,32 @@ body {
 
 h1 {
   font-family: arial, Verdana, sans-serif;
-  background-color: #9933ff;
+  background-color: #6699ff;
   color: white;
   padding: 10px;
   opacity: 0.9;
 }
 
 #left {
-  background-color: #9966ff;
+  background-color: #99ccff;
   padding-left: 10px;
   padding-top: 5px;
-  font-size: 100%;
+  font-size: 120%;
   color: white;
   width: 48%;
   float: left;
+  padding-bottom: 9999px;
 }
 
 #right {
-  background-color: #9966ff;
+  background-color: #99ccff;
   margin-left: 5px;
-  font-size: 100%;
+  font-size: 120%;
   color: white;
   padding-left: 10px;
   float: right;
   width: 48%;
+  padding-bottom: 9999px;
 }
 
 .greenCorrect {
@@ -41,6 +43,6 @@ h1 {
 }
 
 .otterImage {
-  height: 150px;
+  height: 300px;
   width: auto;
 }
