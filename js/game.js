@@ -25,16 +25,15 @@ var responses = [];
 var correctWrong = [];
 
 for (var i = 0; i < questions.length; i++){
+document.getElementById("printQuestion").innerHTML = questions[i];
   if (i === 0 ) {
-    document.write("Question "+ (i+1) + ": " + questions[i] + "<br>");
+    document.getElementById("printHistory").innerHTML = ("Question "+ (i+1) + ": " + questions[i] + "<br>");
+    // document.write("Question "+ (i+1) + ": " + questions[i] + "<br>");
     game(questions[i],answers[i]);
-  // } else if (i === 6) {
-  //   document.write("Possible answers: " + answers[i-1] + "<br>");
-  //   document.write("Your answer ''" + responses[i-1] + "'' was " + correctWrong[i-1] + "!" + "<br>" + "<br>");
   } else {
-    document.write("Possible answers: " + answers[i-1] + "<br>");
-    document.write("Your answer ''" + responses[i-1] + "'' was " + correctWrong[i-1] + "!" + "<br>" + "<br>")
-    document.write("Question "+ (i+1) + ": " + questions[i] + "<br>");
+    document.getElementById("printHistory").innerHTML+= ("Possible answers: " + answers[i-1] + "<br>");
+    document.getElementById("printHistory").innerHTML+= ("Your answer ''" + responses[i-1] + "'' was " + correctWrong[i-1] + "!" + "<br>" + "<br>");
+    document.getElementById("printHistory").innerHTML+= ("Question "+ (i+1) + ": " + questions[i] + "<br>");
     game(questions[i],answers[i]);
   }
 }
@@ -59,6 +58,8 @@ function game(question,answer) {
 
 if (correctWrong[5] === "correct" || correctWrong[5] === "incorrect" ) {
   console.log("cheese");
-  document.write("Possible answers: " + answers[5] + "<br>");
-  document.write("Your answer ''" + responses[5] + "'' was " + correctWrong[5] + "!" + "<br>" + "<br>");
+  document.getElementById("printHistory").innerHTML+= ("Possible answers: " + answers[5] + "<br>");
+  document.getElementById("printHistory").innerHTML+= ("Your answer ''" + responses[5] + "'' was " + correctWrong[5] + "!" + "<br>" + "<br>");
+  // document.write("Possible answers: " + answers[5] + "<br>");
+  // document.write("Your answer ''" + responses[5] + "'' was " + correctWrong[5] + "!" + "<br>" + "<br>");
 }
